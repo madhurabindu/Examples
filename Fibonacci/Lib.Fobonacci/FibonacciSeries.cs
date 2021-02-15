@@ -42,5 +42,35 @@ namespace Lib.Fobonacci
 
             return list?.ToArray();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        public int[] GenerateAndPrint(int count)
+        {
+            int[] list = new int[count];
+            RecursiveGenerate(0, 1, 0, count, ref list);
+
+            return list;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="index"></param>
+        /// <param name="count"></param>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        private int RecursiveGenerate(int a, int b, int index, int count, ref int[] list)
+        {
+            if (index < count)
+            {
+                list[index] = RecursiveGenerate(b, a + b, index + 1, count, ref list);
+            }
+
+            return a;
+        }
     }
 }

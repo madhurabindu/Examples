@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lib.Fobonacci;
+using System;
 
 namespace Main.Fibonacci
 {
@@ -16,6 +17,8 @@ namespace Main.Fibonacci
             // Test all conditions of fibonacci series generation
             TestFibonacci test = new TestFibonacci();
             test.TestAll();
+
+            test.TestRecursive();
         }
     }
 }

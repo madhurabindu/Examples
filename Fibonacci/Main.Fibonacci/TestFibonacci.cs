@@ -21,6 +21,18 @@ namespace Main.Fibonacci
             TestIntMax();
         }
 
+        internal void TestRecursive()
+        {
+            Console.WriteLine("------- Generating Fibonacci series Recursively---------------");
+            FibonacciSeries fb = new FibonacciSeries();
+            var series= fb.GenerateAndPrint(15);
+            if (series != null)
+            {
+                Console.WriteLine(string.Join("\n", series));
+            }
+
+        }
+
         /// <summary>
         /// Test Few good numbers
         /// </summary>
